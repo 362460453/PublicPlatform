@@ -1,0 +1,56 @@
+#server:
+#  port: 8050
+#sharding:
+#  jdbc:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://10.8.18.73:3306/master?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+#    username: root
+#    password: 123456
+#    filters: stat
+#    maxActive: 100
+#    initialSize: 1
+#    maxWait: 15000
+#    minIdle: 1
+#    timeBetweenEvictionRunsMillis: 30000
+#    minEvictableIdleTimeMillis: 180000
+#    validationQuery: SELECT 'x'
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: false
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    removeAbandoned: true
+#    removeAbandonedTimeout: 600
+#    logAbandoned: false
+#    connectionInitSqls:
+##
+##    datasource:
+##          names: master,slave0,slave1
+##          master:
+##            type: org.apache.commons.dbcp.BasicDataSource
+##            driver-class-name: com.mysql.jdbc.Driver
+##            url: jdbc:mysql://localhost:3306/master?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+##            username: root
+##            password: 123456
+##          slave0:
+##            type: org.apache.commons.dbcp.BasicDataSource
+##            driver-class-name: com.mysql.jdbc.Driver
+##            url: jdbc:mysql://localhost:3306/slave?useUnicode=true&characterEncoding=utf-8
+##            username: root
+##            password: 123456
+##          slave1:
+##            type: org.apache.commons.dbcp.BasicDataSource
+##            driver-class-name: com.mysql.jdbc.Driver
+##            url: jdbc:mysql://localhost:3306/slave?useUnicode=true&characterEncoding=utf-8
+##            username: root
+##            password: 123456
+##
+##    config:
+##          masterslave:
+##            load-balance-algorithm-type: round_robin
+##            name:
+##              ms
+##            master-data-source-name:
+##              master
+##            slave-data-source-names:
+##              slave0,slave1

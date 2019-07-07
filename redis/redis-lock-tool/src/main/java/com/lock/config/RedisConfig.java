@@ -60,12 +60,10 @@ public class RedisConfig {
         jedisPoolConfig.setMaxTotal(maxActive);
         jedisPoolConfig.setMinIdle(minIdle);
         JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout);
-​
         logger.info("JedisPool注入成功！");
         logger.info("redis地址：" + host + ":" + port);
         return jedisPool;
     }
-​
 
     /**
      * 读取限流lua脚本
@@ -79,7 +77,6 @@ public class RedisConfig {
         redisScript.setResultType(Number.class);
         return redisScript;
     }
-​
 
     /**
      * 读取解锁lua脚本
@@ -93,7 +90,6 @@ public class RedisConfig {
         redisScript.setResultType(Number.class);
         return redisScript;
     }
-​
 
     /**
      * redis序列化

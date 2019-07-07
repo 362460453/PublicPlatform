@@ -1,6 +1,6 @@
-package com.redislock;
+package com.reidsson.redislock;
 
-import com.config.RedissonManager;
+import com.reidsson.config.RedissonManager;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;

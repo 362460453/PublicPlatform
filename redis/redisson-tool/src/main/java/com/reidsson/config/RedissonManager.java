@@ -1,4 +1,4 @@
-package com.config;
+package com.reidsson.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RAtomicLong;

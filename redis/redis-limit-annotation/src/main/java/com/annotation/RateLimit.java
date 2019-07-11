@@ -16,9 +16,24 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface RateLimit {
+    /**
+     * 限流唯一标示
+     *
+     * @return
+     */
     String key() default "limit";
 
+    /**
+     * 限流时间
+     *
+     * @return
+     */
     int time() default 5;
 
+    /**
+     * 限流次数
+     *
+     * @return
+     */
     int count() default 5;
 }

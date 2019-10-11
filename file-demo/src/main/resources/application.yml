@@ -1,0 +1,12 @@
+server:
+  port: 8020
+  http2:
+    enabled: true
+    undertow:
+      buffer-size: 2048
+      direct-buffers: true
+      io-threads: 4
+      worker-threads: 20
+spring:
+  application:
+    name: mmc-file-server
